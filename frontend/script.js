@@ -99,6 +99,8 @@ const getMessages = async (url) => {
 
     try {
 
+        content.innerHTML = ""
+
         const response = await fetch(url)
 
         if (!response.ok) {
@@ -107,8 +109,8 @@ const getMessages = async (url) => {
 
         const data = await response.json()
 
-        content.innerHTML = ""
         if (data.length > 0) {
+
             data.forEach(element => {
 
                 createMessage(
@@ -118,19 +120,27 @@ const getMessages = async (url) => {
                     element.lido
                 )
             })
-        }else {
-                createMessage(
-                    "random",
-                    "Erro",
-                    "Nenhum recado registrado nesta categoria",
-                    true
-                )
-        }
 
+        } else {
+
+            createMessage(
+                null,
+                "Erro",
+                "Nenhum recado registrado nesta categoria",
+                true
+            )
+        }
 
     } catch (err) {
 
         console.log(err)
+
+        createMessage(
+            "random",
+            "Erro",
+            "Servidor indisponível",
+            true
+        )
     }
 }
 
