@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="radio" name="open" id="open">
+    <input type="radio" name="open" id="close" checked>
+
+    <div class="box-black"></div>
+    <header>
+        <section class="container">
+            <nav>
+                <h1 class="title">
+                    Recados
+                </h1>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <form class="model">
+            <div class="model-header">
+                <h1>
+                    novo recado
+                </h1>
+            </div>
+            <div class="model-main">
+                <label>
+                    <small>
+                        Titulo
+                    </small>
+                    <input type="text" id="title" placeholder="Digite o titulo do seu recado...">
+                </label>
+                <small>
+                    Descrição
+                </small>
+                <textarea name="" id="describle" placeholder="Digite a descrição do seu recado..."></textarea>
+                </label>
+            </div>
+            <div class="model-footer">
+                <label for="close" class="cancel-button">
+                    cancelar
+                </label>
+                <button class="create-button">
+                    Criar
+                </button>
+            </div>
+        </form>
+        <section class="container">
+            <div class="box">
+                <input type="radio" name="filter" id="all" checked>
+                <input type="radio" name="filter" id="read">
+                <input type="radio" name="filter" id="unread">
+                <menu>
+                    <label for="menu" class="menu-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="labels-options">
+                        <label for="open" class="options create-option">
+                            Criar recado
+                        </label>
+                        <label for="all" class="options all-option">
+                            Ver todos
+                        </label>
+
+                        <label for="read" class="options read-option">
+                            Ver lidos
+                        </label>
+
+                        <label for="unread" class="options unread-option">
+                            Ver não lidos
+                        </label>
+                    </div>
+                </menu>
+                <div class="content">
+            
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
