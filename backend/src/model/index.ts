@@ -72,7 +72,7 @@ export const findMany = async() => {
     try{
         const message = await prisma.recados.findMany({
             orderBy: {
-                id:"asc"
+                id:"desc"
             }
         })
         return message;
@@ -85,7 +85,7 @@ export const findManyRead = async() => {
     try{
         const message = await prisma.recados.findMany({
             orderBy: {
-                id:"asc"
+                id:"desc"
             },
             where: {
                 lido: true
@@ -101,7 +101,7 @@ export const findManyUnread = async() => {
     try{
         const message = await prisma.recados.findMany({
             orderBy: {
-                id:"asc"
+                id:"desc"
             },
             where: {
                 lido: false
